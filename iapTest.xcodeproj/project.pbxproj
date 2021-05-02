@@ -14,6 +14,7 @@
 		012366E6263E5231008E8A7B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366E5263E5231008E8A7B /* MainVC.swift */; };
 		012366EB263E5C96008E8A7B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012366EA263E5C96008E8A7B /* StoreKit.framework */; };
 		012366ED263E65B2008E8A7B /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366EC263E65B2008E8A7B /* IAPManager.swift */; };
+		012366EF263E67E7008E8A7B /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366EE263E67E7008E8A7B /* UIControlExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		012366E5263E5231008E8A7B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		012366EA263E5C96008E8A7B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		012366EC263E65B2008E8A7B /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		012366EE263E67E7008E8A7B /* UIControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				012366DB263E5178008E8A7B /* LaunchScreen.storyboard */,
 				012366E5263E5231008E8A7B /* MainVC.swift */,
 				012366D2263E5176008E8A7B /* SceneDelegate.swift */,
+				012366EE263E67E7008E8A7B /* UIControlExtension.swift */,
 			);
 			path = iapTest;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				012366ED263E65B2008E8A7B /* IAPManager.swift in Sources */,
 				012366E6263E5231008E8A7B /* MainVC.swift in Sources */,
 				012366D3263E5176008E8A7B /* SceneDelegate.swift in Sources */,
+				012366EF263E67E7008E8A7B /* UIControlExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
