@@ -1,0 +1,63 @@
+disabled_rules:
+  - trailing_whitespace
+  - unneeded_break_in_switch
+  - identifier_name
+
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  - attributes
+  - closure_spacing
+  - collection_alignment
+  - contains_over_first_not_nil
+  - convenience_type
+  - empty_count
+  - empty_xctest_method
+  - explicit_init
+  - fallthrough
+  - fatal_error_message
+  - first_where
+  - joined_default_parameter
+  - legacy_random
+  - let_var_whitespace
+  - lower_acl_than_parent
+  - mark
+  - modifier_order
+  - nimble_operator
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_action
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - required_enum_case
+  - single_test_class
+  - sorted_first_last
+  - toggle_bool
+  - trailing_closure
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - unused_declaration
+  - untyped_error_in_catch
+  - yoda_condition
+
+included:
+
+excluded:
+  - Pods
+  - Carthage
+  - MVVM_TestTests
+  - MVVM_TestUITests
+
+function_parameter_count: 8
+line_length: 160
+large_tuple: 4
+type_name:
+    min_length: 3
+    max_length:
+        warning: 45
+        error: 50
+nesting:
+  type_level: 3

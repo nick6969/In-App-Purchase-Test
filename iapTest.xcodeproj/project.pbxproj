@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		012366D1263E5176008E8A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366D0263E5176008E8A7B /* AppDelegate.swift */; };
 		012366D3263E5176008E8A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366D2263E5176008E8A7B /* SceneDelegate.swift */; };
-		012366D5263E5176008E8A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366D4263E5176008E8A7B /* ViewController.swift */; };
-		012366D8263E5176008E8A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012366D6263E5176008E8A7B /* Main.storyboard */; };
 		012366DA263E5178008E8A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012366D9263E5178008E8A7B /* Assets.xcassets */; };
 		012366DD263E5178008E8A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012366DB263E5178008E8A7B /* LaunchScreen.storyboard */; };
+		012366E6263E5231008E8A7B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366E5263E5231008E8A7B /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		012366CD263E5176008E8A7B /* iapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012366D0263E5176008E8A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012366D2263E5176008E8A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		012366D4263E5176008E8A7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		012366D7263E5176008E8A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		012366D9263E5178008E8A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012366DC263E5178008E8A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012366DE263E5178008E8A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012366E5263E5231008E8A7B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				012366D0263E5176008E8A7B /* AppDelegate.swift */,
-				012366D2263E5176008E8A7B /* SceneDelegate.swift */,
-				012366D4263E5176008E8A7B /* ViewController.swift */,
-				012366D6263E5176008E8A7B /* Main.storyboard */,
 				012366D9263E5178008E8A7B /* Assets.xcassets */,
-				012366DB263E5178008E8A7B /* LaunchScreen.storyboard */,
 				012366DE263E5178008E8A7B /* Info.plist */,
+				012366DB263E5178008E8A7B /* LaunchScreen.storyboard */,
+				012366E5263E5231008E8A7B /* MainVC.swift */,
+				012366D2263E5176008E8A7B /* SceneDelegate.swift */,
 			);
 			path = iapTest;
 			sourceTree = "<group>";
@@ -77,6 +74,7 @@
 				012366C9263E5176008E8A7B /* Sources */,
 				012366CA263E5176008E8A7B /* Frameworks */,
 				012366CB263E5176008E8A7B /* Resources */,
+				012366E4263E51EC008E8A7B /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -124,21 +122,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012366DD263E5178008E8A7B /* LaunchScreen.storyboard in Resources */,
 				012366DA263E5178008E8A7B /* Assets.xcassets in Resources */,
-				012366D8263E5176008E8A7B /* Main.storyboard in Resources */,
+				012366DD263E5178008E8A7B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		012366E4263E51EC008E8A7B /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		012366C9263E5176008E8A7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012366D5263E5176008E8A7B /* ViewController.swift in Sources */,
 				012366D1263E5176008E8A7B /* AppDelegate.swift in Sources */,
+				012366E6263E5231008E8A7B /* MainVC.swift in Sources */,
 				012366D3263E5176008E8A7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +164,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		012366D6263E5176008E8A7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				012366D7263E5176008E8A7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		012366DB263E5178008E8A7B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
