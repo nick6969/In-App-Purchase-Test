@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import StoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        _ = IAPManager.shared
+        
+        SKPaymentQueue.default().add(IAPManager.shared)
+        
         return true
     }
 

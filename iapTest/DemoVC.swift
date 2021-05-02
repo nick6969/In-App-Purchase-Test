@@ -29,6 +29,7 @@ final class DemoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.mLaySafe(pin: .allZero)
     }
@@ -51,7 +52,15 @@ extension DemoVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        IAPManager.shared.buy(product: models[indexPath.row], callBack: self)
     }
     
+}
+
+extension DemoVC: IAPManagerCallback {
+    
+    func handleState(_ state: IAPManagerState) {
+        print(state)
+    }
+
 }
