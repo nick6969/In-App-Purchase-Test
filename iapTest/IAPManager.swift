@@ -33,7 +33,6 @@ final class IAPManager: NSObject {
                 print($0.productIdentifier)
                 print($0.localizedTitle)
                 print($0.localizedDescription)
-                print($0.introductoryPrice ?? "introductoryPrice equal nil")
                 print($0.price)
                 print($0.priceLocale)
                 print("----")
@@ -88,7 +87,7 @@ extension IAPManager: SKPaymentTransactionObserver {
             case .purchasing:
                 break
             case .purchased:
-                guard let data: Data = getRecripts() else {
+                guard let receiptData: Data = getReceipts() else {
                     callBack?.handleState(.canNotGotReceipt)
                     continue
                 }
@@ -97,7 +96,7 @@ extension IAPManager: SKPaymentTransactionObserver {
                 // Validate Receipt in Server to Apple Server.
                 print(transactionID)
                 print(productID)
-                print(data.base64EncodedString())
+                print(receiptData.base64EncodedString())
                 callBack?.handleState(.paymentSuccess)
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .failed:
@@ -118,7 +117,7 @@ extension IAPManager: SKPaymentTransactionObserver {
     }
  
     private
-    func getRecripts() -> Data? {
+    func getReceipts() -> Data? {
         guard let url: URL = Bundle.main.appStoreReceiptURL else { return nil }
         do {
             let canReach: Bool = try url.checkResourceIsReachable()
