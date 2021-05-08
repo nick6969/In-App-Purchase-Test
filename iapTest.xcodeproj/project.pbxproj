@@ -50,6 +50,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011CDFBA26465C680090B2DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				012366F6263E6C21008E8A7B /* SKProductExtension.swift */,
+				012366EE263E67E7008E8A7B /* UIControlExtension.swift */,
+				012366F0263E683D008E8A7B /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		011CDFBB26465C7C0090B2DA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				012366D9263E5178008E8A7B /* Assets.xcassets */,
+				012366DE263E5178008E8A7B /* Info.plist */,
+				012366DB263E5178008E8A7B /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		011CDFBC26465C8C0090B2DA /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				012366F2263E691E008E8A7B /* DemoVC.swift */,
+				012366E5263E5231008E8A7B /* MainVC.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		011CDFBD26465C9A0090B2DA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				012366F4263E6B9A008E8A7B /* ProductItemTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		011CDFBE26465CC90090B2DA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				012366EC263E65B2008E8A7B /* IAPManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		012366C4263E5176008E8A7B = {
 			isa = PBXGroup;
 			children = (
@@ -70,18 +115,13 @@
 		012366CF263E5176008E8A7B /* iapTest */ = {
 			isa = PBXGroup;
 			children = (
+				011CDFBD26465C9A0090B2DA /* Components */,
+				011CDFBA26465C680090B2DA /* Extension */,
+				011CDFBE26465CC90090B2DA /* Manager */,
+				011CDFBB26465C7C0090B2DA /* Support */,
+				011CDFBC26465C8C0090B2DA /* UIViewController */,
 				012366D0263E5176008E8A7B /* AppDelegate.swift */,
-				012366D9263E5178008E8A7B /* Assets.xcassets */,
-				012366F2263E691E008E8A7B /* DemoVC.swift */,
-				012366EC263E65B2008E8A7B /* IAPManager.swift */,
-				012366DE263E5178008E8A7B /* Info.plist */,
-				012366DB263E5178008E8A7B /* LaunchScreen.storyboard */,
-				012366E5263E5231008E8A7B /* MainVC.swift */,
-				012366F4263E6B9A008E8A7B /* ProductItemTableViewCell.swift */,
 				012366D2263E5176008E8A7B /* SceneDelegate.swift */,
-				012366F6263E6C21008E8A7B /* SKProductExtension.swift */,
-				012366EE263E67E7008E8A7B /* UIControlExtension.swift */,
-				012366F0263E683D008E8A7B /* UIViewExtension.swift */,
 			);
 			path = iapTest;
 			sourceTree = "<group>";
@@ -335,7 +375,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZBBP5D6DJ;
-				INFOPLIST_FILE = iapTest/Info.plist;
+				INFOPLIST_FILE = iapTest/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +396,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZBBP5D6DJ;
-				INFOPLIST_FILE = iapTest/Info.plist;
+				INFOPLIST_FILE = iapTest/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
