@@ -28,7 +28,7 @@ final class IAPManager: NSObject {
     private let productIdentifiers: Set<String> = ["co.Kcin.nil.iapTest.1"]
     private(set) var products: [SKProduct] = [] {
         didSet {
-            print("-- products details start --")
+            print(msg: "-- products details start --")
             products.forEach {
                 print($0.productIdentifier)
                 print($0.localizedTitle)
@@ -37,7 +37,7 @@ final class IAPManager: NSObject {
                 print($0.priceLocale)
                 print("----")
             }
-            print("-- products details end --")
+            print(msg: "-- products details end --")
         }
     }
 
@@ -65,13 +65,21 @@ final class IAPManager: NSObject {
 }
 
 extension IAPManager: SKProductsRequestDelegate {
-
+    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        print("-- product request delegate callback start --")
+        print(msg: "-- product request delegate callback start --")
         print(response.products)
         print(response.invalidProductIdentifiers)
-        print("-- end --")
+        print(msg: "-- end --")
         products = response.products
+    }
+
+    func requestDidFinish(_ request: SKRequest) {
+        print(msg: "skrequest did finish.")
+    }
+    
+    func request(_ request: SKRequest, didFailWithError error: Error) {
+        print(msg: "skrequest error: \(error.localizedDescription)")
     }
 
 }
@@ -94,8 +102,9 @@ extension IAPManager: SKPaymentTransactionObserver {
                 guard let transactionID: String = transaction.transactionIdentifier else { continue }
                 let productID: String = transaction.payment.productIdentifier
                 // Validate Receipt in Server to Apple Server.
-                print(transactionID)
-                print(productID)
+                print(msg: "payment purchased")
+                print("productID: \(productID)")
+                print("transactionID: \(transactionID)")
                 print(receiptData.base64EncodedString())
                 callBack?.handleState(.paymentSuccess)
                 SKPaymentQueue.default().finishTransaction(transaction)

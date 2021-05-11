@@ -60,7 +60,7 @@ extension DemoVC: UITableViewDataSource, UITableViewDelegate {
 extension DemoVC: IAPManagerCallback {
     
     func handleState(_ state: IAPManagerState) {
-        print(state)
+        print(msg: state)
     }
 
 }

@@ -19,6 +19,7 @@
 		012366F3263E691E008E8A7B /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366F2263E691E008E8A7B /* DemoVC.swift */; };
 		012366F5263E6B9A008E8A7B /* ProductItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366F4263E6B9A008E8A7B /* ProductItemTableViewCell.swift */; };
 		012366F7263E6C21008E8A7B /* SKProductExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012366F6263E6C21008E8A7B /* SKProductExtension.swift */; };
+		01D1A7DF264A1D40002E2D8E /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D1A7DE264A1D40002E2D8E /* Print.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		012366F2263E691E008E8A7B /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 		012366F4263E6B9A008E8A7B /* ProductItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemTableViewCell.swift; sourceTree = "<group>"; };
 		012366F6263E6C21008E8A7B /* SKProductExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKProductExtension.swift; sourceTree = "<group>"; };
+		01D1A7DE264A1D40002E2D8E /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				011CDFBA26465C680090B2DA /* Extension */,
 				011CDFBE26465CC90090B2DA /* Manager */,
 				011CDFBB26465C7C0090B2DA /* Support */,
+				01D1A7DD264A1D36002E2D8E /* Tools */,
 				011CDFBC26465C8C0090B2DA /* UIViewController */,
 				012366D0263E5176008E8A7B /* AppDelegate.swift */,
 				012366D2263E5176008E8A7B /* SceneDelegate.swift */,
@@ -132,6 +135,14 @@
 				012366EA263E5C96008E8A7B /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01D1A7DD264A1D36002E2D8E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				01D1A7DE264A1D40002E2D8E /* Print.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				012366F3263E691E008E8A7B /* DemoVC.swift in Sources */,
 				012366ED263E65B2008E8A7B /* IAPManager.swift in Sources */,
 				012366E6263E5231008E8A7B /* MainVC.swift in Sources */,
+				01D1A7DF264A1D40002E2D8E /* Print.swift in Sources */,
 				012366F5263E6B9A008E8A7B /* ProductItemTableViewCell.swift in Sources */,
 				012366D3263E5176008E8A7B /* SceneDelegate.swift in Sources */,
 				012366F7263E6C21008E8A7B /* SKProductExtension.swift in Sources */,
